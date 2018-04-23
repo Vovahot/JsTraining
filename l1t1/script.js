@@ -26,5 +26,3 @@ if(descriminant > 0)
  } else if(descriminant < 0) {
  	console.log("descriminant < 0");
  }
-
- 
