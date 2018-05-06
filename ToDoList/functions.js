@@ -13,6 +13,24 @@ function addTodoItem( todoItem) {
 
     sizeBefore !== sizeAfter ? console.log("Object was added") : console.log("Not add");
     console.log(todoItems);
+
+    var taskHistory = [];
+
+    taskHistory.push({
+        date: (new Date()).toISOString(),
+        text: todoItem.text,
+        completed: todoItem.completed,
+        id: todoItem.id
+    });
+    console.log(taskHistory);
+
+    var checkTaskHistory = function() {
+        $.getJSON( "todoTasks.json", function(tasks) {
+            console.log(tasks);
+            taskHistory = tasks.data;
+        });
+    };
+    checkTaskHistory();
 }
 
 function viewTodoList(item) {
