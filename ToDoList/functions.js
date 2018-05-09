@@ -31,6 +31,7 @@ function addTodoItem( todoItem) {
         });
     };
     checkTaskHistory();
+    document.onload;
 }
 
 function viewTodoList(item) {
@@ -73,6 +74,15 @@ function editItems(id) {
     {
         todoItems[id-1].completed = true;
     } else console.log("element has true status");
+
+    return todoItems;
+}
+
+function editItemsText(id, text) {
+
+    todoItems[id-1].text = text;
+    return todoItems;
+
 }
 
 

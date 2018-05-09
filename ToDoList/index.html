@@ -7,10 +7,23 @@
 	<meta name="description" content="1st homework">
 	<meta name="author" content="Vladimir Hotko">
 </head>
-<body></body>
+<body>
+<input value="Посмотреть все таски" onclick=show() type="button">
+
+<input type="number" id="input_number" value="введите id"  />
+<input type="text" id="input_text" value="введите текст"  />
+<input value="Удалить по ID" onclick=deleteF() type="button"/>
+<input value="Завершить таску" onclick=completeT() type="button"/>
+<input value="Изменить текст" onclick=changeT() type="button"/>
+<div id = "todoitems">
+<ul id = "view">
+
+</ul>
+</div>
+</body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="todoTasks.json"></script>
 <script src="script.js"></script>
 <script src="functions.js"></script>
-
+<script src="dom.js"></script>
 </html>	
